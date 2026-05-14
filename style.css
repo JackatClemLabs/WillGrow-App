@@ -29,11 +29,8 @@ body {
 
  /* app header ==================*/
 .app-header {
-  /* padding: 64px 24px 16px; */
   align-self: flex-start;
-  padding-bottom: 5%;
-  padding-left: 3%;
-
+  padding: 10px 0 30px 10px;
 
   display: flex;
   align-items: left;
