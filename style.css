@@ -11,18 +11,13 @@ body {
   margin: 0;
   min-height: 100%;
 
-  color: white;
+  color: black;
 }
 
 body {
-  font-family: Supreme-Regular;
-  src: url('fonts/Supreme-Regular.woff2') format('woff2');
-  background: linear-gradient(
-    135deg,
-    #1a3a2a 0%,
-    #112d1f 60%,
-    #112f20 100%
-);
+  font-family: Supreme-Bold;
+  src: url('fonts/Supreme-Bold.woff2') format('woff2');
+  background: #EAF1E5;
 
   display: flex;
   flex-direction: column;
@@ -34,9 +29,11 @@ body {
 
  /* app header ==================*/
 .app-header {
-  padding: 64px 24px 16px;
+  /* padding: 64px 24px 16px; */
+  align-self: flex-start;
+  padding-bottom: 5%;
+  padding-left: 3%;
 
-  background-color: black;
 
   display: flex;
   align-items: left;
@@ -47,22 +44,16 @@ body {
 .eyebrow {
   margin: 0 0 4px;
   font-size: 14px;
-  color: #718174;
+  color: black;
 }
 
 h1 {
+  font-family: Supreme-Bold;
+  src: url('fonts/Supreme-Bold.woff2') format('woff2');
   margin: 0;
   font-size: 34px;
   line-height: 1;
-}
-
-.icon-button {
-  width: 42px;
-  height: 42px;
-  border: 0;
-  border-radius: 50%;
-  background: #1a3a2a;
-  font-size: 18px;
+  color: black;
 }
 
 .content {
@@ -80,7 +71,7 @@ h1 {
 
 /* Hero card */
 .hero-card {
-  background: #204c34;
+  background: #1E6433;
   color: white;
   border-radius: 28px;
   padding: 6%;
