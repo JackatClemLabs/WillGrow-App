@@ -1,4 +1,4 @@
-/* Home Page CSS */
+/* Plants Page CSS */
 
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -256,7 +256,9 @@ h1 {
 }
 
 .bottom-nav a.active::after {
-  width: 100%;
+  width: 70%;
+  left: 15%;
+  height: 4px;
   background: #1f5c39;
 }
 
