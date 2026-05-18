@@ -66,6 +66,11 @@ h1 {
 
 /* app header end ============== */
 
+.hero-card-fitting {
+  width: 90%;
+  margin-bottom: 5%;
+}
+
 
 /* Hero card */
 .hero-card {
@@ -73,16 +78,12 @@ h1 {
   color: white;
   border-radius: 28px;
   padding: 6%;
-
-  margin-left: auto;
-  margin-right: auto;
-  
 }
 
 .card-label {
   margin: 0 0 8px;
-  font-size: 13px;
-  color: #b9d9c5;
+  font-size: 20px;
+  color: yellow;
 }
 
 .hero-card h2 {
@@ -265,4 +266,7 @@ main {
   flex: 1;
 }
 
-
+.view-btn a:hover::after {
+  color: yellow;
+  /* transition: width 0.3s ease, left 0.3s ease; */
+}
