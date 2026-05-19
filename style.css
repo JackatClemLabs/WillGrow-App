@@ -56,7 +56,7 @@ h1 {
 
 .content {
   flex: 1;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding: 0 0px 110px;
 
   display: flex;
@@ -148,88 +148,66 @@ h1 {
 }
 
 
-/* Section heading row */
-.water-scheduler {
+/* Water Scheduler */
+.water-schedule {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 15%;
+  padding: 8%;
+
+  background: #ffffff;
+  border-radius: 20px;
+
+  align-self: center;
+  min-width: 125%;
 }
 
-.water-scheduler h3 {
-  margin: 0;
+.water-card {
+  display: grid;
+  grid-template-columns: auto auto;
   font-size: 20px;
+
+  font-family: Supreme-Regular;
+  src: url('../fonts/Supreme-Regular.woff2') format('woff2');
+  color: #61635f;
 }
 
-.water-scheduler a {
+hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: #d8dcd5;
+  flex-shrink: 0;       
+  align-self: stretch;  
+  margin: 12px 0;
+}
+.water-schedule h3 {
+  margin: 0;
+  font-size: 27px;
+}
+
+.water-date {
+  font-family: Supreme-Bold;
+  src: url('fonts/Supreme-bold.woff2') format('woff2');
+
+  color: black;
+}
+
+
+
+
+
+/* 
+  Bottom navigation bar
+*/
+.water-schedule a {
   color: #2d6b45;
   font-size: 14px;
   text-decoration: none;
   font-weight: 700;
 }
-
-/* Plant list */
-.plant-list {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.plant-row {
-  background: white;
-  border-radius: 22px;
-  padding: 16px;
-
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.plant-dot {
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
-  background: #7ab48c;
-  flex-shrink: 0;
-}
-
-.plant-dot.warning {
-  background: #d9a441;
-}
-
-.plant-info {
-  flex: 1;
-}
-
-.plant-info h4 {
-  margin: 0 0 4px;
-  font-size: 16px;
-}
-
-.plant-info p {
-  margin: 0;
-  font-size: 13px;
-  color: #738077;
-}
-
-.status-pill {
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-.status-pill.good {
-  background: #dff2e4;
-  color: #2d6b45;
-}
-
-.status-pill.warn {
-  background: #fff1ce;
-  color: #8a5d00;
-}
-/* 
-  Bottom navigation bar
-*/
 
 .bottom-nav {
   position: fixed;
