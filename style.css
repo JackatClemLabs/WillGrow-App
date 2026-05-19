@@ -166,7 +166,8 @@ h1 {
 
 .water-card {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
+  width: 100%;
   font-size: 20px;
 
   font-family: Supreme-Regular;
@@ -181,7 +182,8 @@ hr {
   background: #d8dcd5;
   flex-shrink: 0;       
   align-self: stretch;  
-  margin: 12px 0;
+  margin: 0;
+  padding: 0;
 }
 .water-schedule h3 {
   margin: 0;
@@ -193,9 +195,39 @@ hr {
   src: url('fonts/Supreme-bold.woff2') format('woff2');
 
   color: black;
+
+  align-items: flex-start;
 }
 
+#water-btn-fit {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
+.water-btn {
+background: #B8794A;
+
+  border: none;
+  border-radius: 15px;
+
+  color: white;
+  font-size: 20px;
+  font-family: Supreme-ExtraBold;
+  src: url('fonts/Supreme-Extrabold.woff2') format('woff2');
+
+  padding: 20px 40px;
+
+  cursor: pointer;
+}
+
+.water-btn:hover {
+  background-color: #b38867;
+}
+
+.water-btn:active {
+  background: blue;
+}
 
 
 
