@@ -12,6 +12,8 @@
   <title>WillGrow | Home</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="supreme.css">
+  <script src="script.js"></script>
+  <noscript>Sorry, but your browser does not support JavaScript!</noscript>
 </head>
 <body>
     <header class="app-header">
@@ -61,23 +63,28 @@
         <!-- Water Scheduler -->
         <section class="water-schedule">
 
-            <h3><strong>Water Schedule</strong></h3>
+          <h3><strong>Water Schedule</strong></h3>
 
-            <div class="water-card">
-              <p>Last Watered</p>
-              <p class="water-date" id="last-watered">Sunday</p>
-            </div>
+          <div class="water-card">
+            <p>Last Watered</p>
+            <p class="water-date" id="last-watered">Sunday</p>
+          </div>
 
-            <hr>
+          <hr>
 
-            <div class="water-card">
-              <p>Next Watering</p>
-              <p class="water-date" id="next-water">Tomorrow</p>
-            </div>
+          <div class="water-card">
+            <p>Next Watering</p>
+            <p class="water-date" id="next-water">Tomorrow</p>
+          </div>
 
-            <div id="water-btn-fit">
-              <button class="water-btn">Mark as Watered</button>
-            </div>
+          <div id="water-btn-fit">
+            <button class="water-btn" id="waterButton">
+              <span class="label-dry">Mark as Watered</span>
+              <span class="water-fill">
+                <span class="label-wet">Watered</span>
+              </span>
+            </button>
+          </div>
 
         </section>
 
@@ -89,5 +96,7 @@
       <a class="nav-btn" href="/page/alerts/alerts.html">Alerts</a>
       <a class="nav-btn" href="/page/settings/settings.html">Settings</a>
     </nav>
+
+
 </body>
 </html>

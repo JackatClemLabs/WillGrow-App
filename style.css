@@ -14,6 +14,8 @@ body {
   min-height: 100% !important;
 
   color: black;
+
+  user-select: none !important;
 }
 
 body {
@@ -199,6 +201,8 @@ hr {
   align-items: flex-start;
 }
 
+
+/* Water button */
 #water-btn-fit {
   display: flex;
   justify-content: center;
@@ -219,17 +223,48 @@ background: #B8794A;
   padding: 20px 40px;
 
   cursor: pointer;
+
+  position: relative;
+  overflow: hidden;
+
+  width: 190px;
+  height: 64px;
 }
 
-.water-btn:hover {
-  background-color: #b38867;
+.label-dry {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
 }
 
-.water-btn:active {
-  background: blue;
+.water-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #4a90d4;
+  overflow: hidden;       /* clips the wet text to the water height */
+  transition: height 0.8s ease-in-out;
+  z-index: 2;
 }
 
-
+.label-wet {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 240px;           /* same as button width */
+  height: 64px;           /* same as button height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
+}
 
 /* 
   Bottom navigation bar
