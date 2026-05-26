@@ -17,8 +17,7 @@ body {
 }
 
 body {
-  font-family: 'Supreme-Bold';
-  src: url('../fonts/Supreme-Bold.woff2') format('woff2');
+  font-family: Supreme-Bold;
   background: #EAF1E5;
 
   display: flex;
@@ -256,9 +255,7 @@ h1 {
 }
 
 .bottom-nav a.active::after {
-  width: 70%;
-  left: 15%;
-  height: 4px;
+  width: 100%;
   background: #1f5c39;
 }
 
@@ -266,5 +263,3 @@ main {
   padding-bottom: 68px;
   flex: 1;
 }
-
-
