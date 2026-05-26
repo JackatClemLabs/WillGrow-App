@@ -17,8 +17,8 @@ body {
 }
 
 body {
-  font-family: Supreme-Bold;
-  src: url('fonts/Supreme-Bold.woff2') format('woff2');
+  font-family: 'Supreme-Bold';
+  src: url('../fonts/Supreme-Bold.woff2') format('woff2');
   background: #EAF1E5;
 
   display: flex;
