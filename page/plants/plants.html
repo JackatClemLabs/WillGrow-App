@@ -1,28 +1,59 @@
-<!-- Plants Page HTML -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WillGrow | Plants</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="../../supreme.css">
+  <link rel="stylesheet" href="/page/plants/style.css" />
+  <link rel="stylesheet" href="/supreme.css" />
 </head>
 <body>
-  <div class="page-title">
-    <h1>Your Plants</h1>
+  <header class="app-header">
+    <div>
+      <h1>Your Plants</h1>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="section-title-row">
+      <h3>Plants</h3>
+      <button id="addSensorBtn" class="add-sensor-btn" aria-label="Add plant">
+        <img src="/page/plants/plus-sign.png" alt="" class="add-sensor-icon" />
+      </button>
+    </div>
+
+    <!-- Cards get rendered in here by JavaScript -->
+    <div class="plant-list" id="plantList"></div>
+  </main>
+
+  <!-- Add Plant modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <h3>New Plant</h3>
+
+      <label class="field-label" for="plantName">Name</label>
+      <input class="field-input" id="plantName" type="text" placeholder="e.g. Tomatoes" />
+
+      <label class="field-label" for="plantNote">Description</label>
+      <input class="field-input" id="plantNote" type="text" placeholder="e.g. Cherry tomatoes by the window" />
+
+      <label class="field-label" for="plantColor">Dot colour</label>
+      <input class="field-color" id="plantColor" type="color" value="#7ab48c" />
+
+      <div class="modal-actions">
+        <button class="modal-btn cancel" id="cancelBtn">Cancel</button>
+        <button class="modal-btn save" id="saveBtn">Save Plant</button>
+      </div>
+    </div>
   </div>
 
+  <nav class="bottom-nav">
+    <a href="/index.html">Home</a>
+    <a class="active" href="/page/plants/plants.html">Plants</a>
+    <a href="/page/alerts/alerts.html">Alerts</a>
+    <a href="/page/settings/settings.html">Settings</a>
+  </nav>
 
-    
-
-
-    <nav class="bottom-nav">
-      <a href="/index.html">Home</a>
-      <a class="active" href="/page/plants/plants.html">Plants</a>
-      <a href="/page/alerts/alerts.html">Alerts</a>
-      <a href="/page/settings/settings.html">Settings</a>
-    </nav>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

@@ -268,12 +268,7 @@ background: #B8794A;
 /* 
   Bottom navigation bar
 */
-.water-schedule a {
-  color: #2d6b45;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 700;
-}
+
 
 .bottom-nav {
   position: fixed;

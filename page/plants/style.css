@@ -1,52 +1,32 @@
-/* Plants Page CSS */
-
 @media (prefers-reduced-motion: reduce) {
-    * {
-        animation: none !important;
-        transition: none !important;
-    }    
+  * { animation: none !important; transition: none !important; }
 }
 
-
-html,
-body {
+html, body {
   margin: 0;
   min-height: 100%;
-
   color: black;
 }
 
 body {
   font-family: Supreme-Bold;
   background: #EAF1E5;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  justify-content: center;
+  justify-content: flex-start;   /* start from top, not centred */
 }
 
-
- /* app header ==================*/
 .app-header {
   align-self: flex-start;
-  padding: 10px 0 30px 10px;
-
-  display: flex;
-  
-  justify-content: space-between;
-}
-
-.eyebrow {
-  margin: 0 0 4px;
-  font-size: 14px;
-  color: black;
+  padding: 20px 0 20px 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 h1 {
   font-family: Supreme-Bold;
-  src: url('fonts/Supreme-Bold.woff2') format('woff2');
   margin: 0;
   font-size: 34px;
   line-height: 1;
@@ -55,71 +35,12 @@ h1 {
 
 .content {
   flex: 1;
-  overflow-y: auto;
-  padding: 0 0px 110px;
-
+  width: 90%;
+  max-width: 480px;
+  padding: 0 0 110px;
   display: flex;
   flex-direction: column;
   gap: 18px;
-}
-
-/* app header end ============== */
-
-
-/* Hero card */
-.hero-card {
-  background: #1E6433;
-  color: white;
-  border-radius: 28px;
-  padding: 6%;
-
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.card-label {
-  margin: 0 0 8px;
-  font-size: 13px;
-  color: #b9d9c5;
-}
-
-.hero-card h2 {
-  margin: 0 0 8px;
-  font-size: 26px;
-  line-height: 1.1;
-}
-
-.card-text {
-  margin: 0;
-  font-size: 14px;
-  color: #d6eadc;
-}
-
-
-/* 
-  Two-column card layout.
-*/
-.stats-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.stat-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 18px;
-}
-
-.stat-card p {
-  margin: 0 0 10px;
-  font-size: 13px;
-  color: #6d7b70;
-}
-
-.stat-card strong {
-  font-size: 24px;
 }
 
 /* Section heading row */
@@ -134,76 +55,153 @@ h1 {
   font-size: 20px;
 }
 
-.section-title-row a {
-  color: #2d6b45;
-  font-size: 14px;
-  text-decoration: none;
-  font-weight: 700;
-}
-
-/* Plant list */
+/* ===== Plant list & cards (matches sketch) ===== */
 .plant-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .plant-row {
-  background: white;
-  border-radius: 22px;
-  padding: 16px;
-
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 22px;
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.plant-row:hover {
+  transform: translateY(-2px);
+  border-color: #cfe0d3;
 }
 
 .plant-dot {
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
   background: #7ab48c;
   flex-shrink: 0;
 }
 
-.plant-dot.warning {
-  background: #d9a441;
-}
-
 .plant-info {
   flex: 1;
+  min-width: 0;
 }
 
 .plant-info h4 {
-  margin: 0 0 4px;
-  font-size: 16px;
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #1a1a1a;
 }
 
 .plant-info p {
   margin: 0;
-  font-size: 13px;
+  font-size: 14px;
   color: #738077;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.status-pill {
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
+.empty-state {
+  text-align: center;
+  color: #738077;
+  font-size: 14px;
+  padding: 30px 0;
 }
 
-.status-pill.good {
-  background: #dff2e4;
-  color: #2d6b45;
+/* ===== Add button ===== */
+.add-sensor-btn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #1E6433;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.status-pill.warn {
-  background: #fff1ce;
-  color: #8a5d00;
+.add-sensor-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
 }
+
+/* ===== Modal ===== */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 40, 28, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.modal-backdrop.open { display: flex; }
+
+.modal {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  width: 100%;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal h3 { margin: 0 0 12px; font-size: 22px; }
+
+.field-label { font-size: 13px; color: #6d7b70; margin-top: 8px; }
+
+.field-input {
+  border: 2px solid #d8dcd5;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 16px;
+  font-family: inherit;
+  outline: none;
+}
+
+.field-input:focus { border-color: #1E6433; }
+
+.field-color {
+  width: 60px;
+  height: 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-actions { display: flex; gap: 10px; margin-top: 18px; }
+
+.modal-btn {
+  flex: 1;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.modal-btn.cancel { background: #e8e8e8; color: #2c2f33; }
+.modal-btn.save { background: #1E6433; color: white; }
+
 /* 
   Bottom navigation bar
 */
+
 
 .bottom-nav {
   position: fixed;
